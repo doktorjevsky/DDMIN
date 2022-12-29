@@ -11,13 +11,6 @@ public class DDMin {
 
     // TODO: testing (he he how ironic :))
 
-    /**
-     * Requires:
-     *     List<T> failingInput is a failing input for Function<List<T>, Boolean> test, meaning
-     *     test.apply(failingInput) produces a false value.
-     * Ensures:
-     *     Returns a smallest subset of failingInput that fails the test given. (There may be more than one smallest subset)
-     * */
 
     public static <T> List<T> ddMin(List<T> failingInput, Function<List<T>, Boolean> test){
         return ddMin(failingInput, test, 2);
@@ -69,7 +62,7 @@ public class DDMin {
             }
         }
         if (current.size() > 0){
-            chunks.add(current);
+            chunks.get(n-1).addAll(current);
         }
         return chunks;
     }
