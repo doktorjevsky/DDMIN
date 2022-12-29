@@ -11,6 +11,11 @@ public class DDMin {
 
     // TODO: testing (he he how ironic :))
 
+    /**
+     * Precondition: The input list is a failing input for the test given
+     * Postcondition: The resulting list is a minimal failing input
+     *
+     * */
 
     public static <T> List<T> ddMin(List<T> failingInput, Function<List<T>, Boolean> test){
         return ddMin(failingInput, test, 2);
